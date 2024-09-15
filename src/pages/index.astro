@@ -41,7 +41,7 @@ import CertRow from "../components/CertRow.astro";
       </svg>
     </button>
 
-    <!-- NOMBRE -->
+    <!-- Nombre -->
     <section class="flex flex-col items-center justify-center">
       <h1 class="text-3xl font-bold">Leandro Pereyra</h1>
       <h2 class="text-xl">Sevilla, Spain</h2>
@@ -186,7 +186,6 @@ import CertRow from "../components/CertRow.astro";
     localStorage.theme = theme;
   }
 
-  // On page load
   if (
     localStorage.theme === "dark" ||
     (!("theme" in localStorage) &&
@@ -197,7 +196,6 @@ import CertRow from "../components/CertRow.astro";
     setTheme("light");
   }
 
-  // Toggle button click event
   window.onload = function () {
     const element = document.getElementById("dark-mode-toggle");
     if (element) {
