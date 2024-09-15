@@ -2,56 +2,209 @@
 import SectionTitle from "../components/SectionTitle.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import Layout from "../layouts/Layout.astro";
-import Bar from "../components/Bar.astro";
 import DataRow from "../components/DataRow.astro";
+import CertRow from "../components/CertRow.astro";
 ---
 
 <Layout title="CV - Leandro Pereyra - Frontend Developer">
-  <main class="flex flex-col items-center justify-center py-14">
-    <!-- NOMBRE -->
-    <h1 class="text-3xl font-bold">Leandro Pereyra</h1>
-    <h2 class="text-xl">Frontend Developer</h2>
+  <main class="py-14 px-2 lg:w-5/12">
+    <button id="dark-mode-toggle" class="mb-2 mt-2">
+      <svg
+        id="sun-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 hidden"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+        ></path>
+      </svg>
+      <svg
+        id="moon-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 hidden"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+        ></path>
+      </svg>
+    </button>
 
-    <!-- Redes/Contacto -->
-    <div class="flex justify-center py-2">
-      <SocialIcons />
-    </div>
+    <!-- NOMBRE -->
+    <section class="flex flex-col items-center justify-center">
+      <h1 class="text-3xl font-bold">Leandro Pereyra</h1>
+      <h2 class="text-xl">Sevilla, Spain</h2>
+    </section>
 
     <!-- Descripción -->
 
     <!-- Experiencia -->
-    <SectionTitle title="Experience" />
-    <Bar />
-    <DataRow
-      title="Fullstack Developer"
-      date="11/2023 07/2024"
-      description="Redesigned and developed user interfaces (UI) and integrated advanced functionalities into the front-end. Integrated front-end with back-end services, ensuring alignment with API specifications. Developed routes and controllers, enhancing front-end interactions and user experience"
-      subTitle="SiwCargo"
-    />
-    <DataRow
-      title="Frontend Developer"
-      date="11/2022 07/2023"
-      description="Designed and developed several small projects, primarily landing pages, along with managing hosting, domain configurations, and migrations."
-      subTitle="Freelance"
-    />
-    <DataRow
-      title="Frontend Developer"
-      date="11/2022 07/2023"
-      description="Designed and developed the user interface following client specification. Managed hosting, domain configurations, and migration. Designed the email signatures."
-      subTitle="MF Estudio"
-    />
-    <DataRow
-      title="Frontend Developer"
-      date="11/2022 07/2023"
-      description="Designed, developed, and optimized graphical interfaces. Integrated front-end dynamics with back-end to ensure efficient data flow, following API specifications and documentation guidelines."
-      subTitle="CryptoForensics"
-    />
-
+    <section id="experience">
+      <SectionTitle title="Experience" />
+      <DataRow
+        title="Fullstack Developer"
+        date="11/2023 07/2024"
+        description="Redesigned and developed user interfaces (UI) and integrated advanced functionalities into the front-end. Integrated front-end with back-end services, ensuring alignment with API specifications. Developed routes and controllers, enhancing front-end interactions and user experience"
+        subTitle="SiwCargo"
+      />
+      <DataRow
+        title="Frontend Developer"
+        date="11/2022 07/2023"
+        description="Designed and developed several small projects, primarily landing pages, along with managing hosting, domain configurations, and migrations."
+        subTitle="Freelance"
+      />
+      <DataRow
+        title="Frontend Developer"
+        date="11/2022 07/2023"
+        description="Designed and developed the user interface following client specification. Managed hosting, domain configurations, and migration. Designed the email signatures."
+        subTitle="MF Estudio"
+      />
+      <DataRow
+        title="Frontend Developer"
+        date="11/2022 07/2023"
+        description="Designed, developed, and optimized graphical interfaces. Integrated front-end dynamics with back-end to ensure efficient data flow, following API specifications and documentation guidelines."
+        subTitle="CryptoForensics"
+      />
+    </section>
     <!-- Educación -->
-    <SectionTitle title="Education" />
-
+    <section id="education">
+      <SectionTitle title="Education" />
+      <DataRow
+        title="Full-Stack Developer"
+        date="11/2021 06/2022"
+        description={`Bootcamp with 800+ hours coding in several technologies related to both Frontend and Backend. Some of the topics seen and learned are the following :
+• Introduction to Computer Science - Advanced Javascript - Data Structures - Algorithms
+• Document Object Model - ES6 Selectors - AJAX - Modules & Bundlers - React - Redux
+• Node JS - Promises - Web Server - Express - Testing - Async / Await
+• Object Relational Mapping - SQL, SQLite, PostgreSQL, Sequelize - Authentication
+• Git (Branching - Gitflow) & Github
+• Agile Methodologies (SCRUM)`}
+        subTitle="Henry"
+      />
+      <DataRow
+        title="Javascript Algorithms and Data Structure"
+        date="10/2021 12/2021"
+        description={`Fundamentals of JavaScript including basic JS, ES6, regular expressions, debugging, basic data structures, basic & intermediate data algorithms, OOP and functional programming`}
+        subTitle="freeCodeCamp"
+      />
+      <DataRow
+        title="Advanced PC Assembly, Hardware & Software Configuration, Troubleshooting and Data Recovery"
+        date="03/2004 06/2005"
+        description={`Fundamentals of electricity and applications, safety components. Hardware and software fundamentals. Main tools for Hardware and Software maintenance. Creation and basic configuration of a virtual machine. Prevention, symptoms, detection and removal of malware. LAN network configuration, router, wifi, internet.`}
+        subTitle="FUCE"
+      />
+    </section>
     <!-- Certificación -->
+    <section id="certifications">
+      <SectionTitle title="Certifications" />
+      <CertRow
+        url="https://res.cloudinary.com/ddkurzft6/image/upload/v1678834759/Leandro_Pereyra_c5z4pj.png"
+        title="Mobile Development with React Native"
+        date="03/2023"
+        subTitle="No Country"
+      />
+      <CertRow
+        url="https://certificates.soyhenry.com/cert?id=c6e158f0-d016-484b-9c25-1ed41b890eb1"
+        title="Full Stack Developer"
+        date="06/2022"
+        subTitle="Henry"
+      />
+      <CertRow
+        url="https://cert.efset.org/5D4ao8"
+        title="English Certificate 72/100 (Proficient)"
+        date="04/2022"
+        subTitle="EF Set"
+      />
+    </section>
 
     <!-- Skills -->
+    <section id="skills">
+      <SectionTitle title="Skills" />
+      <CertRow
+        title="Languages"
+        subTitle="JavaScript (ES6+), TypeScript, HTML5, CSS3."
+      />
+      <CertRow
+        title="Frameworks and Libraries"
+        subTitle="React.js, Astro, React Native, Redux, Node.js, Express.js, D3.js."
+      />
+      <CertRow
+        title="Styling and Design"
+        subTitle="CSS Modules, TailwindCSS, Bootstrap, Material-UI, Figma, Corel Draw."
+      />
+      <CertRow
+        title="Databases"
+        subTitle="PostgreSQL, MongoDB, Firebase, MySQL."
+      />
+      <CertRow
+        title="Tools and Technologies"
+        subTitle="Git / GitHub / Bitbucket, Vite, Next.js, Docker, Postman, Expo Go."
+      />
+      <CertRow
+        title="Web Development Skills"
+        subTitle="Web performance optimization, SEO (Search Engine Optimization), Web application development, Domain management and web hosting, REST APIs."
+      />
+      <CertRow
+        title="Methodologies and Project Management"
+        subTitle="Agile methodologies (Scrum), Trello, Jira."
+      />
+      <CertRow
+        title="Soft Skills"
+        subTitle="Effective communication (verbal and written), Planning and organization, Quick learning, Teamwork, Consistency and dedication, Problem-solving."
+      />
+    </section>
+
+    <!-- Redes/Contacto -->
+    <div class="flex justify-center mt-2 py-2">
+      <SocialIcons />
+    </div>
   </main>
 </Layout>
+
+<script is:inline>
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      document.getElementById("sun-icon").classList.remove("hidden");
+      document.getElementById("moon-icon").classList.add("hidden");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.getElementById("sun-icon").classList.add("hidden");
+      document.getElementById("moon-icon").classList.remove("hidden");
+    }
+    localStorage.theme = theme;
+  }
+
+  // On page load
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    setTheme("dark");
+  } else {
+    setTheme("light");
+  }
+
+  // Toggle button click event
+  window.onload = function () {
+    const element = document.getElementById("dark-mode-toggle");
+    if (element) {
+      element.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        setTheme(isDark ? "light" : "dark");
+      });
+    }
+  };
+</script>

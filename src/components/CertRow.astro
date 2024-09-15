@@ -2,29 +2,26 @@
 export interface Props {
   date?: string;
   title?: string;
-  description: string;
+  url?: string;
   subTitle?: string;
 }
 
-const { description, date, title, subTitle } = Astro.props;
+const { url, date, title, subTitle } = Astro.props;
 ---
 
 <div class="flex flex-row justify-start mx-2 dark:text-white pb-2">
   {
     date && (
       <div class="flex flex-col pr-6">
-        {date.split(" ").map((d: string) => (
-          <div class={"mb-1"}>{d}</div>
-        ))}
+        <div class={"mb-1"}>{date}</div>
       </div>
     )
   }
 
-  <div class="flex-1">
+  <a href={url} class="flex-1">
     <div class="flex gap-3">
       {title && <span class="font-bold">{title}</span>}
       {subTitle && <span>{subTitle}</span>}
     </div>
-    <div>{description}</div>
-  </div>
+  </a>
 </div>
