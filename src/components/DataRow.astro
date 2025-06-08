@@ -26,7 +26,7 @@ const { description, date, title, subTitle, link } = Astro.props;
       {title && <span class="font-bold">{title}</span>} |
       {
         link ? (
-          <a href={link} target="_blank" class="hover:font-semibold duration-300">
+          <a href={link} target="_blank" class="hover:font-semibold duration-100">
             {subTitle}
           </a>
         ) : (
