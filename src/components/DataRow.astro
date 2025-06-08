@@ -4,9 +4,10 @@ export interface Props {
   title?: string;
   description: string;
   subTitle?: string;
+  link?: string;
 }
 
-const { description, date, title, subTitle } = Astro.props;
+const { description, date, title, subTitle, link } = Astro.props;
 ---
 
 <div class="flex flex-row justify-start mx-2 dark:text-white pb-2">
@@ -22,8 +23,16 @@ const { description, date, title, subTitle } = Astro.props;
 
   <div class="flex-1">
     <div class="flex gap-3">
-      {title && <span class="font-bold">{title}</span>}
-      {subTitle && <span>{subTitle}</span>}
+      {title && <span class="font-bold">{title}</span>} |
+      {
+        link ? (
+          <a href={link} target="_blank" class="hover:font-semibold duration-300">
+            {subTitle}
+          </a>
+        ) : (
+          <span>{subTitle}</span>
+        )
+      }
     </div>
     <div>{description}</div>
   </div>
